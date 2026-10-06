@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3·1 NOW | 김성녀 인터뷰</title>
+  <style>
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+    @import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
+    @font-face{font-family:'HsBombaram20';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');font-weight:normal;font-display:swap}
+    :root{--ink:#111;--olive:#8a9462;--line:#111;--pad:50px}
+    *{box-sizing:border-box}
+    html{background:#ecebe5}
+    body{margin:0;color:var(--ink);background:#ecebe5;font-family:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;line-height:1.8;-webkit-text-size-adjust:100%}
+    img{display:block;max-width:100%}
+    .interview{width:100%;max-width:720px;margin:0 auto;background:#fff;overflow:hidden}
+
+    /* header */
+    .board-header{position:relative;height:145px;background:#9fab7e url("assets/landing-top-bg.png") center/auto 100% no-repeat}
+    .board-meta{font-family:Paperlogy,"Pretendard Variable",sans-serif;position:absolute;right:50px;top:55px;height:42px;padding:0 24px;display:flex;align-items:center;border-radius:21px;background:#fff;color:#111;font-size:15.5px;white-space:nowrap;letter-spacing:-.02em}
+    .board-meta strong{font-weight:700}
+    .board-meta i{display:inline-block;width:1px;height:14px;margin:0 7px;background:#111}
+
+    /* hero */
+    .hero{position:relative;overflow:hidden;color:#fff}
+    .hero>img{width:100%;height:auto}
+    .hero-copy{position:absolute;left:52px;right:40px;bottom:38px}
+    .hero-copy h1{margin:0;font-family:HsBombaram20,"Pretendard Variable",serif;font-weight:400;font-size:45px;line-height:1.28;letter-spacing:-.05em}
+    .hero-copy p{margin:14px 0 0;font-size:24px;line-height:1.5;font-weight:400;letter-spacing:-.02em}
+
+    .intro{padding:34px var(--pad) 65px;font-size:16px;line-height:1.85;letter-spacing:-.03em}
+    .intro p{margin:0}
+
+    /* Q&A */
+    .qa{position:relative;border-top:1px solid var(--line)}
+    .qa+.qa,.qa+.qa-grid,.qa-grid+.qa,.qa-grid+.qa-grid{margin-top:90px}
+    .qa-grid+.qa{margin-top:90px}
+    .qmark{position:absolute;top:-22px;left:var(--pad);z-index:2;width:43px;height:43px;border:1px solid #8d9468;border-radius:50%;background:#fff;color:var(--olive);font-family:Georgia,serif;font-weight:700;font-size:20px;line-height:41px;text-align:center}
+    .qa h2{margin:0;font-size:22px;line-height:1.45;font-weight:800;letter-spacing:-.045em;word-break:keep-all}
+    .qa p{margin:0;font-size:16px;line-height:1.8;letter-spacing:-.03em;word-break:keep-all}
+    .qa-body{padding:40px var(--pad) 0}
+    .qa-body h2{margin-bottom:30px}
+    .qa-body figure{margin:0 0 28px}
+    .qa-body figure.flush{margin-left:calc(var(--pad)*-1);margin-right:calc(var(--pad)*-1)}
+    .qa-body figure img{width:100%;height:auto}
+    .qa-body p+figure,.qa-body p+.gallery{margin-top:34px}
+    figcaption{margin-top:10px;color:#8a8a8a;font-size:12px;line-height:1.5;letter-spacing:-.02em}
+    .gallery{display:flex;gap:10px}
+    .gallery img{height:auto;min-width:0}
+    .gallery.g45 img:nth-child(1){flex:1.464}.gallery.g45 img:nth-child(2){flex:1.417}
+    .gallery.g67 img:nth-child(1){flex:1.471}.gallery.g67 img:nth-child(2){flex:.782}
+    .gallery+figcaption{margin-top:10px}
+    .qa-body>*:last-child{margin-bottom:0}
+    .qa:not(.qa-grid) .qa-body{padding-bottom:0}
+
+    /* side-by-side */
+    .qa-grid{display:grid;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+    .qa-grid.left{grid-template-columns:42.2% 57.8%}
+    .qa-grid.right{grid-template-columns:53.6% 46.4%}
+    .qa-grid>img{width:100%;height:100%;object-fit:cover}
+    .qa-grid .qa-copy{position:relative;padding:40px var(--pad) 36px 34px}
+    .qa-grid.left .qa-copy{padding-right:58px}
+    .qa-grid.right .qa-copy{padding-left:var(--pad);padding-right:50px}
+    .qa-grid .qmark{left:34px}
+    .qa-grid.right .qmark{left:var(--pad)}
+    .qa-grid h2{margin:2px 0 26px}
+    .qa-grid .qa-copy{padding-top:50px}
+    .note{margin-top:20px!important;padding-left:.6em;text-indent:-.6em;color:#8a8a8a;font-size:12px!important;line-height:1.7!important}
+
+    /* slider */
+    .slide{position:relative}
+    .slide .arrow{position:absolute;top:50%;width:26px;height:26px;margin-top:-13px;pointer-events:none}
+    .slide .arrow.prev{left:58px}.slide .arrow.next{right:58px}
+    .slide svg{display:block;width:100%;height:100%;fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:square}
+
+    /* relay */
+    .relay{position:relative;margin-top:100px;padding:32px 37px 62px;background:#767a54 url("assets/interview-bottom-bg.png") no-repeat right -13px top -89px/260px auto;color:#fff;overflow:hidden}
+    .relay-card{position:relative;z-index:1;margin-top:0;display:grid;grid-template-columns:54% 1fr;gap:26px;align-items:end}
+    .relay-card img{width:100%;height:auto;align-self:start}
+    .relay-card>div{padding-bottom:12px}
+    .relay-card h3{margin:0 0 18px;font-size:22px;line-height:1.45;font-weight:800;letter-spacing:-.045em;word-break:keep-all}
+    .relay-card p{margin:0;font-size:15px;line-height:1.85;letter-spacing:-.04em;word-break:keep-all}
+
+    /* profile */
+    .profile{padding:34px var(--pad) 40px;background:linear-gradient(90deg,#7f8d5a,#a0a09e);color:#fff}
+    .profile-title{display:flex;align-items:center;margin:0 0 22px -14px}
+    .profile-title img{width:30px;height:30px;position:relative;z-index:1;margin-right:-15px}
+    .profile-title h2{margin:0;padding:6px 22px;border:1px solid #fff;border-radius:22px;font-size:22px;line-height:1.3;font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+    .profile-title:after{content:"";flex:1;height:1px;background:rgba(255,255,255,.85)}
+    .profile p{margin:0 0 0 22px;font-size:14.5px;line-height:1.85;letter-spacing:-.04em;word-break:keep-all}
+
+    @media screen and (max-width:600px){
+      :root{--pad:22px}
+      .board-header{height:92px;background-position:left top}
+      .board-meta{right:16px;top:30px;height:30px;padding:0 11px;font-size:9px;border-radius:15px}
+      .board-meta i{height:9px;margin:0 4px}
+      .hero-copy{left:22px;right:16px;bottom:18px}
+      .hero-copy h1{font-size:26px}
+      .hero-copy p{margin-top:8px;font-size:13px}
+      .intro{padding:22px var(--pad) 36px;font-size:13px}
+      .qa+.qa,.qa+.qa-grid,.qa-grid+.qa,.qa-grid+.qa-grid{margin-top:50px}
+      .qmark{width:34px;height:34px;top:-17px;font-size:16px;line-height:32px}
+      .qa h2{font-size:17px}
+      .qa p{font-size:14px}
+      .qa-body{padding-top:30px}
+      .qa-body h2{margin-bottom:20px}
+      .qa-grid.left,.qa-grid.right{grid-template-columns:1fr}
+      .qa-grid.right>img{order:2}
+      .qa-grid>img{height:auto}
+      .qa-grid .qa-copy,.qa-grid.right .qa-copy{padding:36px var(--pad) 28px}
+      .qa-grid .qmark,.qa-grid.right .qmark{left:var(--pad)}
+      .slide .arrow{width:16px;height:16px;margin-top:-8px}
+      .slide .arrow.prev{left:22px}.slide .arrow.next{right:22px}
+      .relay{padding:20px var(--pad) 36px;margin-top:60px;background-position:right -8px top -54px;background-size:160px auto}
+      .relay-card{grid-template-columns:1fr;gap:18px;margin-top:-10px}
+      .relay-card>div{padding-bottom:0}
+      .relay-card h3{font-size:17px}
+      .relay-card p{font-size:13px}
+      .profile-title h2{font-size:17px}
+      .profile p{margin-left:0;font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <main class="interview">
+    <header class="board-header">
+      <div class="board-meta"><strong>제67회 3·1문화상 예술상 수상자 김성녀</strong><i></i><span>동국대학교 석좌교수</span></div>
+    </header>
+
+    <section class="hero">
+      <img src="assets/interview-top.jpg" alt="김성녀 동국대학교 석좌교수">
+      <div class="hero-copy">
+        <h1>한 사람의 연기 인생이<br>하나의 장르가 되기까지</h1>
+        <p>- 김성녀, 한국적인 공연예술의 길을 만들다</p>
+      </div>
+    </section>
+
+    <section class="intro"><p>1976년 무대에 오른 뒤 50년. 김성녀는 한 장르에 머물지 않았다. 판소리와 연극의 DNA를 바탕으로 마당놀이를 새로운 음악극이자 하나의 장르로 정착시켰고, 국립창극단 예술감독으로서 창극의 소재와 무대를 확장했다. 자신의 이름을 건 『벽 속의 요정』에서는 32개 역할을 홀로 소화하며 관객의 기립박수를 이끌어냈고, 이 작품은 20년 넘게 이어지고 있다. 그는 전통을 지키는 데 그치지 않고, 오늘의 관객과 만날 수 있는 새로운 무대로 만들어왔다. 이제 그는 자신이 만든 무대와 장르가 다음 세대에서도 살아 움직이기를 바란다. 제67회 3·1문화상 예술상 수상자 김성녀. 그가 걸어온 50년의 무대와 전통, 앞으로 이어갈 예술의 이야기를 들어봤다.</p></section>
+
+    <article class="qa-grid left">
+      <img src="assets/interview-01.jpg" alt="김성녀 인터뷰 사진">
+      <div class="qa-copy">
+        <span class="qmark">Q.</span>
+        <h2>제67회 3·1문화상 예술상 수상자로 선정되셨습니다. 이번 수상이 선생님께는 어떤 의미로 다가오나요?</h2>
+        <p>제가 이름이 많이 알려진 대중적인 예술가인지는 모르겠습니다. 하지만 오랫동안 무대를 지켜오면서 남들이 다 하는 것이 아니라 한국적인 연극과 음악극을 하려고 몸부림치며 살아왔습니다. 외롭고 힘든 시간도 많았고, 남들이 가지 않는 길을 가면서 상처받기도 했는데 이번 3·1문화상이 그런 제 삶을 인정하고 보상해준 것 같습니다. ‘내가 걸어온 삶이 옳았다’고 말해주는 증명서 같은 상입니다. 특히 창극과 마당놀이의 가치까지 인정받았다는 점에서 더욱 고맙고 뜻깊습니다.</p>
+      </div>
+    </article>
+
+    <article class="qa-grid right">
+      <div class="qa-copy">
+        <span class="qmark">Q.</span>
+        <h2>50여 년의 활동을 돌아보실 때, 가장 큰 성취를 꼽는다면요?</h2>
+        <p>저는 여성국극을 하셨던 어머니와 연극을 하셨던 아버지 사이에서 태어나 다섯 살 때부터 무대에 섰습니다. 성장해서 연극을 했고, 남편을 만나서는 서양의 뮤지컬이나 연극을 본뜬 것이 아닌 우리의 음악과 연극을 결합한 새로운 형태의 마당놀이를 만들었습니다. 그렇게 만든 마당놀이를 40~50년 동안 이어오고 있습니다. 남이 하지 않았던 장르를 만들고, 그것을 하나의 장르로 정착시킨 것이 제 공연 인생에서 가장 보람 있는 성취라고 생각합니다.</p>
+        <p class="note">*김성녀 교수의 어머니 박옥진은 1950~1960년대 큰 인기를 누린 여성국극 배우로 활동했다. 배우자인 손진책은 연극연출가로 2002년 한일월드컵 개막식을 연출하였으며, 국립극단 예술감독, 대한민국예술원 회장 등을 역임했다.</p>
+      </div>
+      <img src="assets/interview-02.jpg" alt="김성녀 공연 사진">
+    </article>
+
+    <article class="qa">
+      <span class="qmark">Q.</span>
+      <div class="qa-body">
+        <h2>‘김성녀는 관객과 함께 노는 배우’라는 표현을 많이 합니다. 관객과 함께 논다는 것은 어떤 의미인가요?</h2>
+        <figure><img src="assets/interview-03.jpg" alt="김성녀의 마당놀이 공연 장면"></figure>
+        <p>마당놀이는 혼자 노는 장르가 아닙니다. 관객과 함께 놀아야 해요. 우리 전통에는 판소리의 ‘추임새’가 있잖아요. 관객이 “잘한다!”, “좋다!”, “얼씨구!” 하면서 공연하는 사람을 북돋워줍니다. 관객이 적극적으로 개입하는 거죠. 그러려면 작품을 200% 알아야 합니다. 관객이 어떤 말을 하더라도 즉흥적으로 받아치면서 다시 이야기의 줄거리로 돌아갈 수 있어야 하거든요. 그래서 마당놀이는 두 달 정도 공연하면 처음과 마지막이 완전히 달라져요. 줄거리는 같지만 관객과 어떻게 노느냐가 달라지는 거죠. 그게 마당놀이의 생명입니다.</p>
+        <div class="gallery g45"><img src="assets/interview-04.jpg" alt="공연 장면"><img src="assets/interview-05.jpg" alt="공연 장면"></div>
+        <figcaption>함안문화예술회관, 김성녀의 마당놀이 ‘심청이와 춘향이가 온다’. 김성녀의 마당놀이 공연장면 / 출처 : 함안군</figcaption>
+      </div>
+    </article>
+
+    <article class="qa">
+      <span class="qmark">Q.</span>
+      <div class="qa-body">
+        <h2>국립창극단 예술감독으로서 고민하셨던 ‘21세기의 창극’은 어떤 모습이었나요?</h2>
+        <p>제가 국립창극단에 갔을 때 가장 크게 생각한 것은 ‘21세기의 창극은 무엇인가’였습니다. 창극은 오랫동안 판소리를 여러 사람이 나눠 부르는 정도에 머물다 보니 관객이 찾지 않는 장르가 되어 있었습니다. 저는 판소리는 전통으로 지켜야 하지만, 창극은 그 시대와 함께 가야 한다고 생각했습니다. 판소리를 매개로 하되 지금의 미학과 이야기를 담아 발전해야 한다는 거죠. 판소리가 어렵게 느껴지는 사람도 창극을 통해 ‘우리 소리가 이렇게 재미있구나’ 하고 느낄 수 있도록요. 그렇게 창극과 판소리가 서로를 살리는 관계가 되어야 합니다.</p>
+      </div>
+    </article>
+
+    <article class="qa">
+      <span class="qmark">Q.</span>
+      <div class="qa-body">
+        <h2>1인 32역 『벽 속의 요정』은 선생님의 대표작입니다. 처음 이 작품을 만났을 때 어땠나요?</h2>
+        <figure class="flush slide">
+          <img src="assets/interview-slide-1.jpg" alt="김성녀 『벽 속의 요정』 공연 사진">
+          <span class="arrow prev" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M19 2 8 13l11 11"/></svg></span>
+          <span class="arrow next" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="m7 2 11 11L7 24"/></svg></span>
+        </figure>
+        <p>저는 극단에서 활동하고 마당놀이도 하고 학생들도 가르쳤지만, 정작 ‘김성녀’라는 배우를 온전히 보여줄 작품은 없었어요. 그런데 『벽 속의 요정』은 처음으로 제 이름을 걸고 저 자신을 온전히 보여준 작품입니다. 당시에는 연극에서 기립박수를 하는 경우가 많지 않았는데, 첫날부터 기립박수가 터졌어요. 혼자 2시간 반 동안 공연했는데 관객들이 너무 좋아해주셨고, 그해에 상도 많이 받았습니다. 그래서 ‘이 작품을 10년 하겠다’고 했어요. 해외 공연도 다니면서 10년을 했는데 10년이 되어도 여력이 남아 있더라고요. 그래서 또 10년을 하겠다고 했고, 그렇게 20년이 됐습니다.</p>
+        <div class="gallery g67"><img src="assets/interview-06.jpg" alt="공연 장면"><img src="assets/interview-07.jpg" alt="공연 장면"></div>
+      </div>
+    </article>
+
+    <article class="qa">
+      <span class="qmark">Q.</span>
+      <div class="qa-body">
+        <h2>배우로 활동하는 동시에 교육자로서 후학을 양성해 오셨습니다. 가르치는 일은 연기와 어떻게 다른가요?</h2>
+        <figure><img src="assets/interview-08.jpg" alt="김성녀 교수 인터뷰 장면"></figure>
+        <p>저는 가르친다는 것은 다시 배우는 것이라고 생각합니다. 가르치면서 저도 많은 것을 배우고, 미처 해결하지 못했던 문제를 다시 공부하게 됩니다. 교육은 콩나물을 기르는 것과 비슷합니다. 콩나물에 물을 주면 물은 그냥 빠져나가잖아요. 그런데 콩나물은 자랍니다. 가르치는 것도 그렇습니다. 내가 준 것이 그대로 남는 것 같지는 않지만 학생은 자라고 있어요. 그래서 물을 계속 줘야 합니다.</p>
+      </div>
+    </article>
+
+    <article class="qa">
+      <span class="qmark">Q.</span>
+      <div class="qa-body">
+        <h2>전통공연예술을 이어가는 후배들에게 가장 전하고 싶은 말씀이 있다면요?</h2>
+        <p>저는 늘 ‘마라톤처럼 뛰어라’고 이야기합니다. 마라톤은 긴 호흡으로 자기 자신과 싸우며 끝까지 가야 합니다. 이 분야에서 빨리 성공하려고 하면 오래 버티기 어렵습니다. 박정자 선배가 예전에 제게 ‘나는 살아남은 거야’라고 말한 적이 있는데, 그 말이 참 가슴에 와닿았습니다. 저도 학생들에게 빨리 성취하려고 하지 말고, 조금 안 된다고 좌절하거나 포기하지 말라고 합니다. 정말 마음먹었다면 끝까지 살아남아야 합니다. 그러면 크든 작든 자기 자리가 생깁니다.</p>
+      </div>
+    </article>
+
+    <article class="qa">
+      <span class="qmark">Q.</span>
+      <div class="qa-body">
+        <h2>K-컬처와 한국 공연예술이 세계적으로 주목받고 있습니다. 한국 공연예술이 더 발전하기 위해 필요한 것은 무엇일까요?</h2>
+        <figure><img src="assets/interview-09.jpg" alt="‘마당놀이전’ 공연 장면"><figcaption>‘마당놀이전’의 세 배우 김종엽·윤문식·김성녀(왼쪽부터). /출처: 미추</figcaption></figure>
+        <p>저는 뿌리가 중요하다고 생각합니다. 연극이나 판소리처럼 힘들고 배고프더라도 자기 예술을 갈고닦는 사람들이 있어야 문화가 삽니다. 상업적이고 대중적인 것만 주목받지만, 그런 바탕 없이 어떻게 깊이 있는 문화가 나오겠습니까. 10년, 20년 소리로 훈련받은 사람들이 지금 트로트나 크로스오버에서도 활동하고 있습니다. 그 사람들이 바로 뿌리예요. 지금 세계에서 주목받는 한국 문화도 오랫동안 기초를 닦아온 예술가들이 있었기 때문에 가능한 겁니다. K-컬처가 유행처럼 잠깐 번졌다가 사라지지 않으려면 수백 년의 전통과 그것을 지켜온 사람들이 든든한 뿌리가 되어야 합니다.</p>
+      </div>
+    </article>
+
+    <section class="relay">
+      <div class="relay-card">
+        <img src="assets/interview-10.png" alt="3·1 릴레이 — 김성녀 교수">
+        <div>
+          <h3>인터뷰 첫 주자로서 다른 수상자들에게 한 말씀 부탁드립니다.</h3>
+          <p>3·1문화상 수상자들은 각자의 분야에서 오랫동안 자기 길을 걸어온 분들입니다. 그런 분들께 제가 무슨 말을 더 보태겠습니까. 같은 상을 받은 동기로서, 모두 건강하고 행복하게 자신의 일을 오래 이어가시길 바랍니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile">
+      <div class="profile-title"><img src="assets/interview-star.png" alt=""><h2>김성녀 교수</h2></div>
+      <p>1950년 서울 출생. 1976년 연극 무대에 데뷔했다. 국립창극단 예술감독, 중앙대학교 국악대학 학장·국악교육대학원장을 역임했으며 현재 동국대학교 한국음악과 석좌교수로 재직하고 있다. 연극·뮤지컬·창극·마당놀이 등 다양한 장르에서 활동했으며, 『벽 속의 요정』에서 1인 32역을 맡아 주목받았다. 백상예술대상, 서울연극제 연기상, 한국뮤지컬대상, 이해랑연극상 등을 수상했다.</p>
+    </section>
+  </main>
+</body>
+</html>

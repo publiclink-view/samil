@@ -3,41 +3,171 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3·1 NOW | 2026년 10월 소식</title>
+  <title>3·1 NOW | 3·1 NEWS 2026년 10월 소식</title>
   <style>
-    .board-dongjeong{width:100%;max-width:720px;margin:0 auto;color:#171717;background:#fff9eb;font-family:Arial,"Noto Sans KR",sans-serif;line-height:1.65}
-    .board-dongjeong .board-header{box-sizing:border-box;height:calc(100vw * 116 / 720);max-height:116px;padding:20px 40px;background:#a8b48a url("assets/landing-top.png") center bottom/100% auto no-repeat;overflow:hidden;position:relative}
-    .board-dongjeong .board-logo{position:relative;z-index:1;display:block;width:76px;height:auto}
-    .board-dongjeong .news-hero{padding:50px 48px 32px;background:#fff9eb;text-align:center}
-    .board-dongjeong .hero-card{position:relative;display:flex;align-items:center;justify-content:center;min-height:240px;overflow:hidden;background:url("assets/news-hero.jpg") center/cover no-repeat;color:#fff}
-    .board-dongjeong .hero-card:after{content:"";position:absolute;inset:0;background:rgba(57,66,38,.5)}
-    .board-dongjeong .hero-title{position:relative;z-index:1;margin:0;font-size:34px;line-height:1.25;font-weight:800;letter-spacing:-1.5px;text-shadow:0 1px 1px rgba(0,0,0,.15)}
-    .board-dongjeong .hero-title:after{content:"";display:block;width:160px;height:2px;margin:16px auto 0;background:#fff}
-    .board-dongjeong .story{padding:36px 48px 42px;background:#fff9eb;border-bottom:1px solid #77736a}
-    .board-dongjeong article.story:nth-of-type(even){background:#ffffff}
-    .board-dongjeong article.story:last-of-type{border-bottom:0}
-    .board-dongjeong .story:last-child{border-bottom:0}
-    .board-dongjeong .story-heading{display:flex;align-items:flex-start;gap:11px;margin:0 0 12px;font-size:20px;line-height:1.35;letter-spacing:-.8px}
-    .board-dongjeong .story-icon{display:block;flex:0 0 27px;width:27px;height:27px;border-radius:50%;object-fit:contain}
-    .board-dongjeong .story-meta{display:inline-block;margin:0 0 13px;padding:3px 8px;background:#edf0df;font-size:13px;font-weight:700;line-height:1.45;letter-spacing:-.5px}
-    .board-dongjeong article.story:nth-of-type(odd) .story-meta{background:#ffffff}
-    .board-dongjeong .story-copy{margin:0;font-size:15px;line-height:1.75;letter-spacing:-.45px}
-    .board-dongjeong .footnote{padding:24px 48px 34px;background:#fff;color:#777;font-size:12px}
-    @media screen and (max-width:600px){.board-dongjeong .board-header{height:82px;padding:18px 22px}.board-dongjeong .news-hero{padding:28px 20px 24px}.board-dongjeong .hero-card{min-height:180px}.board-dongjeong .hero-title{font-size:27px}.board-dongjeong .story{padding:27px 22px 31px}.board-dongjeong .story-heading{font-size:18px}.board-dongjeong .story-meta{font-size:11px}.board-dongjeong .story-copy{font-size:14px}.board-dongjeong .footnote{padding:20px 22px 28px}}
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+    @import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
+    :root{--pad:50px;--blue:#2f6ca3;--beige:#a89c88;--navy:#2b4885}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#ecebe5}
+    img{display:block;max-width:100%}
+    .board-news{width:100%;max-width:720px;margin:0 auto;padding-bottom:80px;color:#111;background:#fff;font-family:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;line-height:1.65;overflow:hidden}
+
+    /* header */
+    .board-header{position:relative;height:145px;background:#9fab7e url("assets/landing-top-bg.png") center/auto 100% no-repeat}
+    .board-meta{position:absolute;right:50px;top:55px;height:42px;padding:0 24px;display:flex;align-items:center;border-radius:21px;background:#fff;color:#111;font-family:Paperlogy,"Pretendard Variable",sans-serif;font-size:15.5px;white-space:nowrap;letter-spacing:-.02em}
+    .board-meta strong{font-weight:700}
+    .board-meta i{display:inline-block;width:1px;height:14px;margin:0 7px;background:#111}
+
+    /* item */
+    .item{position:relative;margin:82px var(--pad) 0;padding-top:0}
+    .board-header+.item{margin-top:51px}
+    .item:before{content:"";display:block;height:4px;background:linear-gradient(90deg,#a3ad82,#a1a29c)}
+    .item-title{display:flex;gap:0;margin:27px 0 28px;font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.05em;word-break:keep-all}
+    .item-title .num{flex:0 0 58px;color:#9eae77}
+    .item-photo{border:1px solid #111}
+    .item-photo img{width:100%;height:auto}
+    .item p{margin:22px 0 0;font-size:18px;line-height:1.65;letter-spacing:-.04em}
+
+    /* 01 infographic */
+    .stats{display:grid;grid-template-columns:182px 1fr;gap:26px;margin-top:56px}
+    .stat{font-family:Paperlogy,"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;border-radius:27px;color:#fff;background:linear-gradient(90deg,var(--blue),var(--beige))}
+    .stat.tall{display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:34px 0 28px;background:linear-gradient(180deg,var(--blue),var(--beige));text-align:center}
+    .stat h3{margin:0;font-size:21px;line-height:1.25;font-weight:600;letter-spacing:-.04em}
+    .stat.tall img{width:127px;height:auto}
+    .stat.tall p{margin:0;font-size:16px;line-height:1.3;font-weight:300;letter-spacing:-.04em;text-align:center}
+    .stat b{font-weight:600}
+    .stat.tall p b{font-size:23px}
+    .stat-col{display:grid;gap:22px}
+    .stat.wide{display:grid;grid-template-columns:150px 1fr;column-gap:22px;align-items:center;min-height:173px;padding:0 24px 0 0}
+    .stat.wide .lead{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+    .stat.wide .lead img{height:auto}
+    .stat.wide .lead.cap img{width:68px}
+    .stat.wide .lead.bank img{width:50px}
+    .stat.wide .detail p{margin:0;font-size:18px;line-height:1.4;font-weight:300;letter-spacing:-.04em;text-align:left}
+    .stat.wide .detail p b{font-size:27px;letter-spacing:-.05em}
+    .stat.wide .detail p small{font-size:16px;font-weight:300}
+    .item .stat p{margin:0}
+
+    /* 02 process */
+    .process{font-family:Paperlogy,"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;display:grid;grid-template-columns:343px 1fr;margin-top:29px}
+    .process-card{background:var(--navy);color:#fff}
+    .process-card .shot{position:relative}
+    .process-card .shot:after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,rgba(45,74,136,0),#2d4a88)}
+    .process-card img{width:100%;height:auto}
+    .process-card .criteria{padding:38px 36px 30px;background:linear-gradient(180deg,#2d4a88,#37518c)}
+    .process-card h3{margin:0 0 14px;font-size:24px;line-height:1.3;font-weight:700;letter-spacing:-.05em}
+    .process-card ul{margin:0;padding:0;list-style:none}
+    .process-card li{position:relative;padding-left:.7em;font-size:16px;line-height:1.8;font-weight:300;letter-spacing:-.04em}
+    .process-card li:before{content:"·";position:absolute;left:0}
+    .steps{position:relative;margin:0;padding:2px 0 0 48px;list-style:none}
+    .steps:before{content:"";position:absolute;left:28px;top:25px;bottom:25px;border-left:2px dotted var(--navy)}
+    .steps li{position:relative;display:flex;align-items:center;margin:0 0 25px}
+    .steps li:last-child{margin-bottom:0}
+    .steps li:before{content:"";position:absolute;left:-23px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--navy)}
+    .steps span{display:inline-flex;align-items:center;gap:8px;height:47px;padding:0 20px;border:1.5px solid #222;border-radius:24px;background:#fff;font-size:18px;font-weight:500;letter-spacing:-.04em;white-space:nowrap}
+    .steps b{font-size:20px;font-weight:800}
+
+    @media screen and (max-width:600px){
+      :root{--pad:22px}
+      .board-header{height:92px;background-position:left top}
+      .board-meta{right:16px;top:30px;height:30px;padding:0 11px;font-size:9px;border-radius:15px}
+      .board-meta i{height:9px;margin:0 4px}
+      .item{margin-top:50px}
+      .board-header+.item{margin-top:28px}
+      .item-title{font-size:19px;margin:18px 0 16px}
+      .item-title .num{flex-basis:38px}
+      .item p{font-size:14px;margin-top:16px}
+      .stats{grid-template-columns:1fr;margin-top:28px;gap:14px}
+      .stat.tall{padding:26px 0 22px}
+      .stat.tall img{width:100px}
+      .stat-col{gap:14px}
+      .stat.wide{grid-template-columns:108px 1fr;column-gap:12px;min-height:130px;padding-right:14px}
+      .stat.wide .detail p{font-size:13px}
+      .stat.wide .detail p b{font-size:19px}
+      .stat.wide .lead.cap img{width:50px}.stat.wide .lead.bank img{width:38px}
+      .stat h3{font-size:16px}
+      .process{grid-template-columns:1fr;margin-top:18px}
+      .process-card .criteria{padding:26px 22px}
+      .process-card h3{font-size:18px}
+      .process-card li{font-size:14px}
+      .steps{padding:26px 0 0 38px}
+      .steps:before{left:18px;top:50px}
+      .steps li:before{left:-23px}
+      .steps span{height:40px;font-size:15px}
+      .steps b{font-size:16px}
+    }
   </style>
 </head>
 <body>
-  <div class="board-dongjeong">
-    <header class="board-header"><img class="board-logo" src="assets/now-logo.png" alt="3·1 NOW"></header>
-    <section class="news-hero"><div class="hero-card"><h1 class="hero-title">2026년 10월 소식</h1></div></section>
-    <article class="story"><h2 class="story-heading"><img class="story-icon" src="assets/icon-landing-01.png" alt=""><span>심경호 교수, 조선 후기 실학 연구서 출간</span></h2><p class="story-meta">심경호 고려대학교 명예교수 | 제63회 3·1문화상 학술상 인문·사회과학부문</p><p class="story-copy">조선 후기 실학의 사상과 지식 체계를 깊이 들여다본 새 연구서가 나왔습니다. 심경호 교수는 2026년 5월 《『성호사설』의 사유방법 1·2: 변정·상론·제안의 지식학》을 펴냈습니다. 이번 저서는 실학자 성호 이익이 지식을 구성하고 사유를 전개한 방식을 체계적으로 살피며, 조선 후기 학문의 흐름과 실학사상의 의미를 새롭게 조명합니다.</p></article>
-    <article class="story"><h2 class="story-heading"><img class="story-icon" src="assets/icon-landing-02.png" alt=""><span>조승우 교수, 2026년 기초연구사업 ‘리더연구’ 선정</span></h2><p class="story-meta">조승우 연세대학교 생명공학과 교수 | 제64회 3·1문화상 학술상 자연과학부문</p><p class="story-copy">줄기세포와 조직공학·재생의학 분야의 연구를 꾸준히 이어온 조승우 교수가 새로운 도전을 시작합니다. 조 교수는 2026년 6월 과학기술정보통신부가 주관하는 기초연구사업 ‘리더연구(유형A)’ 신규 과제에 선정됐습니다. 이번 선정을 바탕으로 바이오융합 분야를 더욱 깊이 탐구해 나갈 예정입니다.</p></article>
-    <article class="story"><h2 class="story-heading"><img class="story-icon" src="assets/icon-landing-03.png" alt=""><span>임대식 교수, 지방세포 생성 조절 원리 규명</span></h2><p class="story-meta">임대식 KAIST 생명과학과 교수 | 제66회 3·1문화상 학술상 자연과학부문</p><p class="story-copy">지방세포가 만들어지는 과정을 설명할 새로운 단서가 나왔습니다. 임대식 교수는 지방세포의 생성과 분화를 조절하는 원리를 규명하고, 그 연구 결과를 2026년 1월 종합 과학 학술지 《사이언스 어드밴시스(Science Advances)》에 발표했습니다. 이번 연구는 비만과 대사질환의 발생 원리를 이해하고 새로운 치료법을 찾는 데 도움이 될 것으로 기대됩니다.</p></article>
-    <article class="story"><h2 class="story-heading"><img class="story-icon" src="assets/icon-landing-04.png" alt=""><span>구본창 작가, 사진 기획전 《진동하는 사물들》 개최</span></h2><p class="story-meta">구본창 사진작가, 경일대학교 석좌교수 | 제63회 3·1문화상 예술상</p><p class="story-copy">익숙한 사물도 사진가의 시선을 만나면 새로운 이야기를 품습니다. 구본창 작가는 2026년 6월부터 7월까지 서울 국제갤러리에서 사진 기획전 《진동하는 사물들》을 선보였습니다. 구 작가가 직접 기획하고 참여한 이번 전시에는 한국 사진작가 9인의 정물 사진이 소개됐으며, 일상 속 사물에 쌓인 시간과 기억, 존재의 의미를 사진이라는 매체를 통해 조명했습니다.</p></article>
-    <article class="story"><h2 class="story-heading"><img class="story-icon" src="assets/icon-landing-05.png" alt=""><span>김영재 명인, 국가무형유산 거문고산조 공개행사 개최</span></h2><p class="story-meta">김영재 국가무형유산 거문고산조 보유자 | 제65회 3·1문화상 예술상</p><p class="story-copy">거문고의 깊은 울림으로 전통의 가치를 되새기는 무대가 열렸습니다. 김영재 명인은 2026년 6월 26일 서울 국가무형유산 전수교육관 민속극장 풍류에서 거문고산조 공개행사를 열었습니다. 신쾌동류 거문고산조와 거문고병창, 합주가 어우러진 무대를 통해 전통음악의 예술적 가치와 전승의 의미를 관객들과 나눴습니다.</p></article>
-    <article class="story"><h2 class="story-heading"><img class="story-icon" src="assets/icon-landing-06.png" alt=""><span>안종현 교수, 차세대 반도체 기술 연구과제 선정</span></h2><p class="story-meta">안종현 연세대학교 전기전자공학부 교수 | 제62회 3·1문화상 기술·공학상</p><p class="story-copy">차세대 반도체의 성능을 높이기 위한 새로운 연구가 시작됩니다. 안종현 교수는 2026년 6월 과학기술정보통신부 기초연구사업 ‘리더연구(유형A)’ 연구자로 선정됐습니다. 이번 과제에서는 2차원 반도체를 활용한 고성능 3차원 집적소자를 개발하며 차세대 반도체의 핵심 기술을 연구할 예정입니다.</p></article>
-    <article class="story"><h2 class="story-heading"><img class="story-icon" src="assets/icon-landing-07.png" alt=""><span>이창건 전 한국원자력문화진흥원장 별세</span></h2><p class="story-meta">故 이창건 전 한국원자력문화진흥원장 | 제53회 3·1문화상 기술상 수상자</p><p class="story-copy">한국 원자력 기술의 자립과 발전에 평생을 헌신한 이창건 전 한국원자력문화진흥원장이 2026년 7월 6일 향년 96세로 별세했습니다. 고인은 대한민국 1세대 원자력 공학자로, 국내 최초의 원자로 운전면허 취득과 연구용 원자로 가동, 고리원자력발전소 부지 선정 및 한국형 원자로 개발 등에 기여하며 우리나라 원자력 산업의 기틀을 마련했습니다. 2013년 제53회 3·1문화상을 수상했으며, 2017년 대한민국 과학기술유공자로 선정됐습니다. 우리나라 원자력 기술 발전에 남긴 고인의 발자취를 기리며, 삼가 명복을 빕니다.</p></article>
-    <p class="footnote">※수상자들의 직함 및 소속은 수상 당시를 기준으로 표기하였습니다.</p>
-  </div>
+  <main class="board-news">
+    <header class="board-header">
+      <div class="board-meta"><strong>3·1 NEWS</strong><i></i><span>2026년 10월 소식</span></div>
+    </header>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">01</span><span>2026학년도 3·1장학생 선발 및 장학금 지급</span></h2>
+      <figure class="item-photo" style="margin:0"><img src="assets/news-01.jpg" alt="장학증서를 전달하는 장면"></figure>
+      <div class="stats">
+        <div class="stat tall">
+          <h3>장학생 선발</h3>
+          <img src="assets/news-vector-1.png" alt="">
+          <p>박사과정 장학생<br>최종 <b>37명</b> 선발</p>
+        </div>
+        <div class="stat-col">
+          <div class="stat wide">
+            <div class="lead cap"><h3>장학금 지원</h3><img src="assets/news-vector-2.png" alt=""></div>
+            <div class="detail"><p>2026년 2학기 장학금 지원<br><b>1억 4,800만 원</b><br>1년간 <b>총 3억 원</b> 규모</p></div>
+          </div>
+          <div class="stat wide">
+            <div class="lead bank"><h3>누적 대학원<br>장학 수혜</h3><img src="assets/news-vector-3.png" alt=""></div>
+            <div class="detail"><p>1961~2025년<br><b>총 3,579명</b> <small>수혜</small><br><b>약 52억 원</b> <small>장학금 지급</small></p></div>
+          </div>
+        </div>
+      </div>
+      <p>2026학년도 3·1장학생 모집(7월 6일~7월 26일) 결과, 엄정한 심사를 거쳐 총 37명의 박사과정 학생이 최종 선발되었습니다. 3·1문화재단은 다양한 분야에서 학문과 연구에 매진하는 인재들이 안정적으로 활동을 이어갈 수 있도록 지속적으로 지원하고 있습니다. 이번에 선발된 장학생들에게는 2026년 2학기 장학금 1억 4,800만 원을 시작으로, 1년간 총 3억 원 규모의 장학금이 지급될 예정입니다. 이번 장학금이 장학생들의 학문적 성취를 뒷받침하는 든든한 기반이 되기를 기대합니다.</p>
+    </section>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">02</span><span>제68회 3·1문화상 후보자 추천 접수 마감 및<br>심사위원회 착수</span></h2>
+      <div class="process">
+        <div class="process-card">
+          <div class="shot"><img src="assets/news-02.jpg" alt="심사 회의 장면"></div>
+          <div class="criteria">
+            <h3>공정한 심사를 위한 기준</h3>
+            <ul>
+              <li>위원 정원 2/3 이상 출석 시 회의 성립</li>
+              <li>후보자 선정은 출석위원 2/3 이상 찬성</li>
+              <li>모든 의결은 무기명 투표</li>
+              <li>심사위원은 이해관계가 있는 후보의 심사를 기피할 수 있음</li>
+            </ul>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><span><b>01</b> 후보자 모집</span></li>
+          <li><span><b>02</b> 심사위원회 구성</span></li>
+          <li><span><b>03</b> 분과위원장 회의</span></li>
+          <li><span><b>04</b> (분과별) 심사</span></li>
+          <li><span><b>05</b> (수상 대상자) 검증</span></li>
+          <li><span><b>06</b> (수상자) 인준</span></li>
+          <li><span><b>07</b> (수상자) 발표</span></li>
+          <li><span><b>08</b> 시상식</span></li>
+        </ol>
+      </div>
+      <p style="margin-top:36px">지난 7월 1일부터 진행된 ‘제68회 3·1문화상’ 후보자 추천 접수가 9월 10일 마감되었습니다. 현재 학술(인문사회과학), 학술(자연과학), 예술, 기술·공학 등 각 분야의 전문가로 심사위원회 구성을 마쳤으며, 분과위원장 회의와 분야별 심사, 검증 등의 절차를 거쳐 수상자를 선정할 예정입니다. 3·1문화재단은 공정하고 신중한 심사를 바탕으로 심사 전 과정을 충실히 이어가겠습니다.</p>
+    </section>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">03</span><span>굿굿시리즈 신간 출간 및 출간 예정 소식</span></h2>
+      <figure class="item-photo" style="margin:0"><img src="assets/news-03.jpg" alt="굿굿시리즈 신간 《사라지는 일, 살아남는 사람》"></figure>
+      <p>재단의 교양 단행본 시리즈 ‘굿굿시리즈’의 24번째 도서 《나의 이기심이 세상을 구한다면》(손봉호 저)이 지난 6월 출간되었습니다. 우리 사회의 윤리적 성찰과 이타성에 대한 깊이 있는 통찰을 담은 책으로, 독자 여러분의 많은 관심 바랍니다. 이어 9월에는 미래 전망을 주제로 한 25번째 도서 《사라지는 일, 살아남는 사람》(이찬 저)을 선보였습니다. 굿굿시리즈가 전하는 새로운 이야기에도 많은 관심과 기대 바랍니다.</p>
+    </section>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">04</span><span>천안아산 다문화엄마학교 8차년도 성료 및<br>9차년도(17기) 개강</span></h2>
+      <figure class="item-photo" style="margin:0"><img src="assets/news-04.jpg" alt="다문화엄마학교 졸업생과 신입생"></figure>
+      <p>재단이 후원하는 천안아산 다문화엄마학교가 8차년도 교육 사업을 성공적으로 마무리했습니다. 8차년도 과정에서는 15기 11명(12명 입학), 16기 13명(14명 입학) 등 총 24명의 다문화 가정 어머니가 전 과정을 이수하며 뜻깊은 졸업의 결실을 맺었습니다. 이어 2026학년도 하반기에는 17기 신입생 10명이 새롭게 입학해 9차년도 교육을 시작했으며, 자녀 교육과 사회 적응을 위한 다양한 배움을 이어가고 있습니다.</p>
+    </section>
+  </main>
 </body>
 </html>
