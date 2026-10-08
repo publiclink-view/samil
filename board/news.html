@@ -81,12 +81,13 @@
       .item-title .num{flex-basis:38px}
       .item p{font-size:18px;margin-top:16px}
       .stats{grid-template-columns:1fr;margin-top:28px;gap:14px}
-      .stat.tall{display:grid;grid-template-columns:108px auto;justify-content:center;column-gap:12px;align-items:center;min-height:130px;padding:0;background:linear-gradient(90deg,var(--blue),var(--beige));text-align:left}
+      .stat.tall,.stat.wide{display:grid;grid-template-columns:96px minmax(0,156px);justify-content:center;column-gap:8px;align-items:center;min-height:130px;padding:0 12px}
+      .stat.tall{background:linear-gradient(90deg,var(--blue),var(--beige));text-align:left}
+      .stat.tall .lead,.stat.wide .lead{align-items:center;gap:8px;width:max-content;max-width:100%;text-align:center}
       .stat.tall .lead img{width:50px}
       .stat.tall .detail p{font-size:13px;text-align:left}
       .stat.tall .detail p b{font-size:19px}
       .stat-col{gap:14px}
-      .stat.wide{grid-template-columns:108px auto;justify-content:center;column-gap:12px;min-height:130px;padding-right:0}
       .stat.wide .detail p{font-size:13px;text-align:left}
       .stat.wide .detail p b{font-size:19px}
       .stat.wide .lead.cap img{width:50px}.stat.wide .lead.bank img{width:38px}
